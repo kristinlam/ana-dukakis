@@ -1,0 +1,43 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 2rem;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	display: grid;
+	grid-template-rows: 10vh 80vh min-content 40vw;
+	grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+}
+
+.main-navigation {
+	background-color: #ffe4a3;
+	grid-column: full-start / full-end;
+}
+
+.about {
+	background-color: #ffbd91;
+	grid-column: center-start / center-end;
+}
+
+.portfolio {
+	background-color: #ff8d71;
+	grid-column: center-start / center-end;
+}
+
+.footer {
+	background-color: #ff707e;
+	grid-column: full-start / full-end;
+}
