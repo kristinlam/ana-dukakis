@@ -5,6 +5,7 @@
 
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -13,25 +14,27 @@
 <body id="home" class="container">
 	<nav class="main-nav">
 		<ul class="main-nav__list">
-			<li class="main-nav__list-item"><a class="main-nav__link" href="#">Home</a></li>
-			<li class="main-nav__list-item"><a class="main-nav__link" href="#">Portfolio</a></li>
-			<li class="main-nav__list-item"><a class="main-nav__link" href="#">Contact</a></li>
+			<li class="main-nav__list-item"><a class="main-nav__link" href="#about">About</a></li>
+			<li class="main-nav__list-item"><a class="main-nav__link" href="#portfolio__nav">Portfolio</a></li>
+			<li class="main-nav__list-item"><a class="main-nav__link" href="#contact">Contact</a></li>
 		</ul>
 	</nav>
 
-	<section id="about" class="about">
+	<div id="about" class="about__text-box">
 		<div class="about__text">
-			<h1 class="about__heading">Ana Dukakis</h1>
-			<p class="about__description">I am a <span>content creator</span> with experience in creative narrative writing, web editing, editorial services and proofreading.</p>
-			<a class="btn about__btn" href="#portfolio">View my work</a>
+			<h1 class="about__heading u-mb-sm">Ana Dukakis</h1>
+			<p class="about__description u-mb-md">I am a <span>content creator</span> with experience in creative narrative writing, web editing, editorial services and proofreading.</p>
+			<a class="btn about__btn" href="#portfolio__nav">View my work</a>
 		</div>
+	</div>
 
-		<div class="about__img-box">
-			<img class="about__img" src="img/about-img.jpg">
-		</div>
-	</section>
+	<div class="about__img-box">
+		<img class="about__img" src="img/about.jpg">
+	</div>
 
-	<section id="portfolio" class="portfolio">
+	<div id="portfolio__nav" class="portfolio__nav">portfolio nav</div>
+
+	<div class="portfolio">
 		<div class="row">
 			<div class="portfolio__item">1</div>
 			<div class="portfolio__item">2</div>
@@ -49,12 +52,12 @@
 			<div class="portfolio__item">2</div>
 			<div class="portfolio__item">3</div>
 		</div>
-	</section>
+	</div>
 
-	<section id="contact" class="contact">
+	<div id="contact" class="contact">
 		<h2 class="heading--secondary">Get in Touch</h2>
 		<p class="contact__description">For any inquiries, please email me at <a href="mailto:anastasia.dukakis@gmail.com">anastasia.dukakis@gmail.com</a></p>
-	</section>
+	</div>
 
 	<footer class="footer">
 		<p class="footer__copyright">Copyright © 2019 Ana Dukakis - All Rights Reserved.</p>

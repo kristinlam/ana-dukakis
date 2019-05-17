@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -16,9 +17,13 @@ body {
 	color: #252a34;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Playfair Display', sans-serif;
+}
+
 .container {
 	display: grid;
-	grid-template-rows: 12vh 88vh min-content 40vw 10rem;
+	grid-template-rows: 12vh min-content 12vh min-content 20vw 10rem;
 	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -51,28 +56,31 @@ body {
 	color: #08d9d6;
 }
 
-.about {
-	background-color: #eaeaea;
-	grid-column: center-start / center-end;
+.about__text-box {
+	grid-column: full-start / col-end 4;
 
-	display: grid;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	grid-template-columns: repeat(6, 1fr);
+	padding: 0 8rem;
 }
 
 .about__text {
-	border: 1px solid black;
-	padding: 1rem 3rem;
-	background-color: white;
+	line-height: 1.8;
+	text-align: right;
+}
+
+.about__img-box {
+	grid-column: col-start 5 / full-end;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .about__heading {
-	font-size: 4rem;
-	text-transform: uppercase;
+	font-size: 6rem;
+	/*text-transform: uppercase;*/
 	font-weight: 300;
-	letter-spacing: 2px;
+	letter-spacing: 5px;
 }
 
 .about__description {
@@ -81,14 +89,23 @@ body {
 
 .about__description span {
 	color: #08d9d6;
+	font-weight: 700;
+	font-size: 2rem;
 }
 
 .about__img {
-	max-height: 35rem;
+	max-width: 100%;
+	max-height: 50rem;
+	object-fit: cover;
+}
+
+.portfolio__nav {
+	background-color: #08d9d6;
+	grid-column: full-start / full-end;
 }
 
 .portfolio {
-	background-color: #08d9d6;
+	background-color: pink;
 	grid-column: center-start / center-end;
 }
 
@@ -127,3 +144,16 @@ body {
 	background-color: rgba(8,217,214,.5);
 	color: #fff;
 }
+
+/*-------------------------------------------
+Utility Classes
+-------------------------------------------*/
+.u-mb-xlg { margin-bottom: 8rem !important; }
+.u-mb-lg { margin-bottom: 5rem !important; }
+.u-mb-md { margin-bottom: 3rem !important; }
+.u-mb-sm { margin-bottom: 1rem !important; }
+
+.u-mt-sm { margin-top: 1rem !important; }
+.u-mt-md { margin-top: 3rem !important; }
+.u-mt-lg { margin-top: 5rem !important; }
+.u-mt-xlg { margin-top: 8rem !important; }
