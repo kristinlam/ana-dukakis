@@ -12,32 +12,118 @@ html {
 
 body {
 	box-sizing: border-box;
-	font-size: 2rem;
 	font-family: 'Poppins', sans-serif;
+	color: #252a34;
 }
 
 .container {
 	display: grid;
-	grid-template-rows: 10vh 80vh min-content 40vw;
-	grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+	grid-template-rows: 12vh 88vh min-content 40vw 10rem;
+	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-.main-navigation {
-	background-color: #ffe4a3;
+.main-nav {
+	background-color: #eaeaea;
 	grid-column: full-start / full-end;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-nav__list-item {
+	display: inline-block;
+	margin: 1rem 2rem;
+}
+
+.main-nav__link:link,
+.main-nav__link:visited {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-decoration: none;
+	color: #252a34;
+	padding: 1rem;
+	transition: color .2s;
+}
+
+.main-nav__link:hover {
+	color: #08d9d6;
 }
 
 .about {
-	background-color: #ffbd91;
+	background-color: #eaeaea;
 	grid-column: center-start / center-end;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.about__text {
+	border: 1px solid black;
+	padding: 1rem 3rem;
+	background-color: white;
+}
+
+.about__heading {
+	font-size: 4rem;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 2px;
+}
+
+.about__description {
+	font-size: 1.8rem;
+}
+
+.about__description span {
+	color: #08d9d6;
+}
+
+.about__img {
+	max-height: 35rem;
 }
 
 .portfolio {
-	background-color: #ff8d71;
+	background-color: #08d9d6;
+	grid-column: center-start / center-end;
+}
+
+.contact {
+	background-color: #ff2e63;
 	grid-column: center-start / center-end;
 }
 
 .footer {
-	background-color: #ff707e;
+	background-color: #eaeaea;
 	grid-column: full-start / full-end;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__copyright {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.btn {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	border-radius: 6rem;
+	padding: 2rem 3rem;
+	display: inline-block;
+}
+
+.about__btn {
+	border: 3px solid rgba(255,255,255,.6);
+	border: 2px solid white;
+	background-color: rgba(8,217,214,.5);
+	color: #fff;
 }
