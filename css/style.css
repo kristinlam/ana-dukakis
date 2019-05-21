@@ -23,6 +23,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Playfair Display', sans-serif;
+	font-weight: 300;
 }
 
 /*-------------------------------------------
@@ -86,12 +87,6 @@ About Header
 	text-align: right;
 }
 
-.about__heading {
-	font-size: 6rem;
-	font-weight: 300;
-	letter-spacing: 5px;
-}
-
 .about__description {
 	font-size: 1.8rem;
 }
@@ -150,7 +145,7 @@ Portfolio Navigation
 Portfolio Content
 -------------------------------------------*/
 .portfolio__content {
-	background-color: pink;
+	/*background-color: pink;*/
 	grid-column: center-start / center-end;
 	padding: 10rem 0;
 	box-sizing: content-box;
@@ -159,15 +154,28 @@ Portfolio Content
 .grid-item {
 	width: 23%;
 	margin: 1%;
-	transition: all .2s;
+	position: relative;
+}
+
+.grid__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 1.8rem;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 3px;
 }
 
 .grid-item img {
 	width: 100%;
+	transition: filter .4s;
 }
 
-.grid-item:hover {
-	opacity: 0.3;
+.grid-item:hover img {
+    filter: brightness(.7);
 }
 
 /*-------------------------------------------
@@ -175,7 +183,24 @@ Contact Info
 -------------------------------------------*/
 .contact {
 	background-color: #ff2e63;
-	grid-column: center-start / center-end;
+	background-color: #eaeaea;
+	grid-column: full-start / full-end;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact__description {
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+
+.contact__link:link,
+.contact__link:visited {
+	text-decoration: none;
+	color: #08d9d6;
 }
 
 /*-------------------------------------------
@@ -183,7 +208,7 @@ Footer Copyright
 -------------------------------------------*/
 
 .footer {
-	background-color: #eaeaea;
+	background-color: #08d9d6;
 	grid-column: full-start / full-end;
 
 	display: flex;
@@ -195,6 +220,7 @@ Footer Copyright
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	color: #fff;
 }
 
 /*-------------------------------------------
@@ -214,6 +240,19 @@ Buttons
 	border: 2px solid #fff;
 	background-color: rgba(8,217,214,.5);
 	color: #fff;
+}
+
+/*-------------------------------------------
+Headings
+-------------------------------------------*/
+.heading--primary {
+	font-size: 6rem;
+	letter-spacing: 5px;
+}
+
+.heading--secondary {
+	font-size: 4rem;
+	letter-spacing: 3px;
 }
 
 /*-------------------------------------------
