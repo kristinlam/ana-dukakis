@@ -10,6 +10,10 @@ Global Styling
   box-sizing: inherit;
 }
 
+::selection {
+    background-color: #08d9d6;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -32,7 +36,7 @@ Grid Container
 
 .container {
 	display: grid;
-	grid-template-rows: 10vh min-content 10vh min-content 20vw 10rem;
+	grid-template-rows: 10vh min-content min-content minmax(50vh, min-content) 20vw 10rem;
 	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -41,17 +45,24 @@ Main Navigation Bar
 -------------------------------------------*/
 
 .main-nav {
-	background-color: #08d9d6;
 	grid-column: full-start / full-end;
 
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+}
+
+.main-nav__logo {
+	font-size: 2.5rem;
+	margin-left: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
 }
 
 .main-nav__list-item {
 	display: inline-block;
-	margin: 1rem 2rem;
+	margin: 1rem 3rem;
 }
 
 .main-nav__link:link,
@@ -60,60 +71,48 @@ Main Navigation Bar
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	text-decoration: none;
-	color: #fff;
-	padding: 1rem;
+	color: #252a34;
 	transition: color .2s;
 }
 
 .main-nav__link:hover {
-	color: #252a34;
+	color: #08d9d6;
 }
 
 /*-------------------------------------------
-About Header
+Header
 -------------------------------------------*/
 
-.about__text-box {
-	grid-column: full-start / col-end 5;
+.header {
+	grid-column: col-start 3 / col-end 6;
 
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
-	padding: 0 15rem;
+	padding: 12rem 0 8rem;
 }
 
-.about__text {
+.header__text {
 	line-height: 1.8;
-	text-align: right;
+	text-align: center;
 }
 
-.about__description {
+.header__description {
 	font-size: 1.8rem;
 }
 
-.about__description span {
+.header__description span {
 	color: #08d9d6;
 	font-weight: 700;
 	font-size: 2rem;
-}
-
-.about__img-box {
-	grid-column: col-start 6 / full-end;
-	display: flex;
-}
-
-.about__img {
-	width: 100%;
-	max-height: 50rem;
-	object-fit: cover;
 }
 
 /*-------------------------------------------
 Portfolio Navigation
 -------------------------------------------*/
 .portfolio__nav {
-	background-color: #eaeaea;
-	grid-column: full-start / full-end;
+	background-color: #08d9d6;
+	grid-column: center-start / center-end;
 
 	display: flex;
 	justify-content: center;
@@ -121,24 +120,22 @@ Portfolio Navigation
 }
 
 .portfolio__nav ul {
-	padding: 2rem;
+	/*padding: 2rem;*/
 }
 
 .portfolio__nav li {
 	display: inline-block;
 	padding: 1.2rem 2.5rem;
 	font-size: 1.4rem;
-	color: #252a34;
-	font-weight: 400;
+	color: #fff;
 	cursor: pointer;
   	text-transform: uppercase;
   	letter-spacing: 3px;
 }
 
 .portfolio__nav li.active {
-	color: #252a34;
-	border: 1px solid #252a34;
-	border-radius: 1.5rem;
+	color: #fff;
+	background-color: rgba(0,0,0,.2);
 }
 
 /*-------------------------------------------
@@ -146,8 +143,9 @@ Portfolio Content
 -------------------------------------------*/
 .portfolio__content {
 	/*background-color: pink;*/
+
 	grid-column: center-start / center-end;
-	padding: 10rem 0;
+	padding: 5rem 0;
 	box-sizing: content-box;
 }
 
@@ -178,12 +176,7 @@ Portfolio Content
     filter: brightness(.7);
 }
 
-/*-------------------------------------------
-Contact Info
--------------------------------------------*/
-.contact {
-	background-color: #ff2e63;
-	background-color: #eaeaea;
+.about {
 	grid-column: full-start / full-end;
 
 	display: flex;
@@ -192,13 +185,13 @@ Contact Info
 	justify-content: center;
 }
 
-.contact__description {
+.about__description {
 	font-size: 1.6rem;
 	line-height: 1.8;
 }
 
-.contact__link:link,
-.contact__link:visited {
+.about__link:link,
+.about__link:visited {
 	text-decoration: none;
 	color: #08d9d6;
 }
@@ -208,7 +201,6 @@ Footer Copyright
 -------------------------------------------*/
 
 .footer {
-	background-color: #08d9d6;
 	grid-column: full-start / full-end;
 
 	display: flex;
@@ -220,7 +212,6 @@ Footer Copyright
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	color: #fff;
 }
 
 /*-------------------------------------------
@@ -248,6 +239,7 @@ Headings
 .heading--primary {
 	font-size: 6rem;
 	letter-spacing: 5px;
+	line-height: 1.2;
 }
 
 .heading--secondary {
