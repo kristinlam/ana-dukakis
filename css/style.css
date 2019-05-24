@@ -30,6 +30,54 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 }
 
+
+/*-------------------------------------------
+Buttons
+-------------------------------------------*/
+.btn {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	border-radius: 6rem;
+	padding: 2rem 3rem;
+	display: inline-block;
+}
+
+/*-------------------------------------------
+Text Styles
+-------------------------------------------*/
+.heading--primary {
+	font-size: 6rem;
+	letter-spacing: 5px;
+	line-height: 1.2;
+}
+
+.heading--secondary {
+	font-size: 3rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.heading--tertiary {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.8rem;
+}
+
+.paragraph {
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+
+.paragraph:not(:last-child){
+	margin-bottom: 2rem;
+}
+
+.link:link,
+.link:visited {
+	text-decoration: none;
+	color: #252a34;;
+}
+
 /*-------------------------------------------
 Body Container
 -------------------------------------------*/
@@ -123,6 +171,23 @@ Header
 	font-size: 2rem;
 }
 
+.header__link:link,
+.header__link:visited {
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.header__link--box:hover {
+	animation: growShrink 1s infinite;
+}
+
+@keyframes growShrink {
+  0% { transform: scale(1.0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1.0); }
+}
+
 /*-------------------------------------------
 Portfolio Navigation
 -------------------------------------------*/
@@ -157,7 +222,6 @@ Portfolio Navigation
 Portfolio Content
 -------------------------------------------*/
 .portfolio__content {
-
 	grid-column: center-start / center-end ;
 	margin: 5rem 0;
 	box-sizing: content-box;
@@ -215,11 +279,12 @@ Portfolio Content
 
 .grid-item img {
 	width: 100%;
+    filter: brightness(.8);
 	transition: filter .4s;
 }
 
 .grid-item:hover img {
-    filter: brightness(.5);
+    filter: brightness(.3);
 }
 
 
@@ -277,51 +342,6 @@ Footer Copyright
 	letter-spacing: 2px;
 }
 
-/*-------------------------------------------
-Buttons
--------------------------------------------*/
-.btn {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	border-radius: 6rem;
-	padding: 2rem 3rem;
-	display: inline-block;
-}
-
-/*-------------------------------------------
-Text Styles
--------------------------------------------*/
-.heading--primary {
-	font-size: 6rem;
-	letter-spacing: 5px;
-	line-height: 1.2;
-}
-
-.heading--secondary {
-	font-size: 3rem;
-	letter-spacing: 3px;
-	text-transform: uppercase;
-}
-
-.heading--tertiary {
-	font-family: 'Poppins', sans-serif;
-	font-size: 1.8rem;
-}
-
-.paragraph {
-	font-size: 1.6rem;
-	line-height: 1.8;
-}
-
-.paragraph:not(:last-child){
-	margin-bottom: 2rem;
-}
-
-.link:link,
-.link:visited {
-	text-decoration: none;
-}
 
 /*-------------------------------------------
 Utility Classes
