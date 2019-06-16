@@ -82,12 +82,16 @@ Text Styles
 Body Container
 -------------------------------------------*/
 .body__container {
-/*	display: flex;
-	justify-content: center;
-	max-width: 100%;*/
 	max-width: 140rem;
 	margin: 3vw auto;
 	background-color: #efefef;
+}
+
+@media only screen and (max-width: 1400px) {
+	.body__container {
+		background-color: #fff;
+		margin: 0 auto;
+	}
 }
 
 /*-------------------------------------------
@@ -101,18 +105,18 @@ Grid Container
 	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
+
+
 /*-------------------------------------------
 Main Navigation Bar
 -------------------------------------------*/
 
 .main-nav {
 	grid-column: center-start / center-end;
-
 	display: flex;
 	justify-content: space-between;
 	margin-top: 5rem;
 }
-
 
 .main-nav__list-item {
 	display: inline-block;
@@ -137,8 +141,8 @@ Main Navigation Bar
 	color: #08d9d6;
 }
 
-.main-nav__logo:link,
-.main-nav__logo:visited {
+.main-nav__logo {
+
 	font-size: 2.5rem;
 	font-weight: 700;
 }
@@ -155,6 +159,15 @@ Header
 	align-items: center;
 	padding: 12rem 0 8rem;
 }
+
+
+
+@media only screen and (max-width: 900px) {
+	.header {
+		grid-column: center-start / center-end;
+	}
+} 
+
 
 .header__text {
 	line-height: 1.8;
@@ -196,6 +209,13 @@ Portfolio Navigation
 	grid-column: center-start / center-end;
 }
 
+@media only screen and (max-width: 1100px) {
+	.portfolio__nav {
+		grid-column: full-start / full-end;
+	}
+} 
+
+
 .portfolio__nav ul {
 	display: flex;
 	align-items: center;
@@ -231,6 +251,20 @@ Portfolio Content
 	margin: 1%;
 }
 
+@media only screen and (max-width: 1200px) {
+	.grid-item {
+		width: 48%;
+		margin: 1%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.grid-item {
+		width: 70%;
+		margin: 1% 15%;
+	}
+}
+
 .grid__text {
 	color: #fff;
 	text-align: center;
@@ -244,6 +278,8 @@ Portfolio Content
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+
+	width: 90%;
 	opacity: 1;
 	transition: all 0.35s;
 }
@@ -308,6 +344,29 @@ About
 	width: 50%;
 }
 
+@media only screen and (max-width: 1000px) {
+	.about__text {
+		margin-left: 8rem;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.about {
+		padding: 10rem 0;
+		flex-direction: column;
+	}
+
+	.about__heading {
+		align-self: center;
+	}
+
+	.about__text {
+		width: 100%;
+		text-align: center;
+		margin-left: 0;
+	}
+}
+
 .about__link:link,
 .about__link:visited {
 	color: white;
@@ -319,6 +378,21 @@ About
 .about__link:hover {
 
 }
+
+/*-------------------------------------------
+Social Media Icons
+-------------------------------------------*/
+.social_icon {
+	width: 2.6rem;
+	height: 100%;
+	margin-right: .5rem;
+}
+
+
+.social_icon:hover {
+	filter: brightness(0.5);
+}
+
 
 /*-------------------------------------------
 Footer Copyright
