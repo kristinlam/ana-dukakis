@@ -34,13 +34,18 @@ h1, h2, h3, h4, h5, h6 {
 /*-------------------------------------------
 Buttons
 -------------------------------------------*/
-.btn {
+.btn:link, .btn:visited {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 1.5rem;
 	border-radius: 6rem;
-	padding: 2rem 3rem;
+	padding: 1rem 1.5rem;
 	display: inline-block;
+	border: solid 1px #fff;
+}
+
+.portfolio__btn:link, .portfolio__btn:visited {
+	color: #fff;
 }
 
 /*-------------------------------------------
@@ -61,15 +66,6 @@ Text Styles
 .heading--tertiary {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.8rem;
-}
-
-.paragraph {
-	font-size: 1.6rem;
-	line-height: 1.8;
-}
-
-.paragraph:not(:last-child){
-	margin-bottom: 2rem;
 }
 
 .link:link,
@@ -289,7 +285,7 @@ Portfolio Content
 	opacity: 0;
 }
 
-.grid__text--detail {
+.grid__text--description {
 	letter-spacing: 2px;
 	width: 80%;
 	font-size: 1.2rem;
@@ -306,7 +302,7 @@ Portfolio Content
 	cursor: pointer;
 }
 
-.grid-item:hover .grid__text--detail {
+.grid-item:hover .grid__text--description {
 	opacity: 1;
 	transform: translate(-50%, -50%);
 }
@@ -342,6 +338,15 @@ About
 .about__text {
 	margin-left: 15rem;
 	width: 50%;
+}
+
+.about__text p {
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+
+.about__text p:not(:last-child){
+	margin-bottom: 2rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -386,11 +391,11 @@ Social Media Icons
 	width: 2.6rem;
 	height: 100%;
 	margin-right: .5rem;
+	transition: all .5s;
 }
 
-
 .social_icon:hover {
-	filter: brightness(0.5);
+	filter: brightness(0.3);
 }
 
 
