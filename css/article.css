@@ -368,7 +368,8 @@ Footer Copyright
 .footer {
 	grid-column: full-start / full-end;
 
-	display: flex;
+    display: flex;
+    flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
@@ -379,6 +380,10 @@ Footer Copyright
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+}
+
+.social {
+    margin-bottom: 10px;
 }
 
 
