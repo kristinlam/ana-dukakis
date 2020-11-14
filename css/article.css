@@ -277,74 +277,55 @@ Article Body
 }
 
 .article__body p:not(:last-child) {
-    margin-bottom: 4rem;
+    margin-bottom: 2.2rem;
 }
 
 /*-------------------------------------------
-About
+Videos
 -------------------------------------------*/
-.about {
-	grid-column: center-start / center-end;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	padding: 15rem 0;
+.video-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+	margin-top: 5rem;
 }
 
-.about__heading {
-	align-self: flex-start;
+.responsive-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
 }
 
-.about__text {
-	margin-left: 15rem;
-	width: 50%;
+/*-------------------------------------------
+Buttons
+-------------------------------------------*/
+.article__body a:link,
+.article__body a:visited {
+	color: #08d9d6;
+	text-decoration: none;
 }
 
-.about__text p {
-	font-size: 1.6rem;
-	line-height: 1.8;
+.article__body a:hover {
+	text-decoration: underline;
 }
 
-.about__text p:not(:last-child){
-	margin-bottom: 2rem;
-}
-
-@media only screen and (max-width: 1000px) {
-	.about__text {
-		margin-left: 8rem;
-	}
-}
-
-@media only screen and (max-width: 900px) {
-	.about {
-		padding: 10rem 0;
-		flex-direction: column;
-	}
-
-	.about__heading {
-		align-self: center;
-	}
-
-	.about__text {
-		width: 100%;
-		text-align: center;
-		margin-left: 0;
-	}
-}
-
-.about__link:link,
-.about__link:visited {
+.article__body .btn:link,
+.article__body .btn:visited {
+	background-color: grey;
 	color: white;
-	padding: 2px;
-	border-radius: 3px;
-	background-color: #08d9d6;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	padding: 1.5rem 3rem;
+	border-radius: 6rem;
+	letter-spacing: 2px;
+	text-decoration: none;
 }
 
-.about__link:hover {
-
-}
 
 /*-------------------------------------------
 Social Media Icons

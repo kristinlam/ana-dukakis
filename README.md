@@ -1,2 +1,2 @@
-# ana-dukakis
+# portfolio
 Website for Ana Dukakis
